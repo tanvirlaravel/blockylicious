@@ -8,7 +8,12 @@
   "icon": "smiley",
   "description": "A Curvy Block",
   "example": {},
-  "attributes": {},
+  "attributes": {
+    "enableTopCurve": {
+      "type": "boolean",
+      "default": true
+    }
+  },
   "supports": {
     "html": false
   },

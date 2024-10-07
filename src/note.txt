@@ -1,3 +1,17 @@
+ const blockProps = useBlockProps();
+	 blockProps = {
+	 	"tabIndex": 0,
+	 	"className": "block-editor-block-list__block wp-block wp-block-blockylicious-curvy",
+	 	"id": "block-8f9478a6-488c-4ea6-9b38-bfebb3b23db6",
+	 	"role": "document",
+	 	"aria-label": "Block: Curvy",
+	 	"data-block": "8f9478a6-488c-4ea6-9b38-bfebb3b23db6",
+	 	"data-type": "blockylicious/curvy",
+	 	"data-title": "Curvy",
+		"style": {}
+	 }
+==============================================================================================
+
 This is going to be save in database
 --------------------------------------------------------------------------------------------
 <!-- wp:paragraph {"align":"center"} -->
@@ -6,6 +20,24 @@ This is going to be save in database
 ---------------------------------
 1. wp:paragraph is the block name
 2. {"align":"center"} this is json data also known as attribute
+
+==============================================================================================
+
+props = {
+    "name": "blockylicious/curvy",
+    "isSelected": false,
+    "attributes": {
+        "enableTopCurve": true
+    },
+    "clientId": "9df8fe5f-65b3-4ebb-ae1f-f38115b9bc5e",
+    "isSelectionEnabled": true,
+    "__unstableParentLayout": {
+        "contentSize": "620px",
+        "wideSize": "1280px",
+        "type": "constrained"
+    },
+    "context": {}
+}
 
 
 

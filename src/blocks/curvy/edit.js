@@ -31,20 +31,8 @@ import metadata from "./block.json";
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
-
-	// const blockProps = useBlockProps();
-	// blockProps = {
-	// 	"tabIndex": 0,
-	// 	"className": "block-editor-block-list__block wp-block wp-block-blockylicious-curvy",
-	// 	"id": "block-8f9478a6-488c-4ea6-9b38-bfebb3b23db6",
-	// 	"role": "document",
-	// 	"aria-label": "Block: Curvy",
-	// 	"data-block": "8f9478a6-488c-4ea6-9b38-bfebb3b23db6",
-	// 	"data-type": "blockylicious/curvy",
-	// 	"data-title": "Curvy",
-	// 	"style": {}
-	// }
+export default function Edit(props) {
+	console.log("props", props);
 
 	return (
 		<>
