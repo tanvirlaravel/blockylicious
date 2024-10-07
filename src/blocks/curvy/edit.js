@@ -12,6 +12,7 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { PanelBody } from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -50,7 +51,9 @@ export default function Edit() {
 			{ __( 'Blockylicious – hello from the editor!', 'blockylicious' ) }
 		</p>
 		<InspectorControls>
-			Test
+			<PanelBody title="Top Curve">
+				test
+			</PanelBody>
 		</InspectorControls>
 		</>
 	);
