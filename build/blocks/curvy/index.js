@@ -52,6 +52,20 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Edit() {
+  // const blockProps = useBlockProps();
+  // blockProps = {
+  // 	"tabIndex": 0,
+  // 	"className": "block-editor-block-list__block wp-block wp-block-blockylicious-curvy",
+  // 	"id": "block-8f9478a6-488c-4ea6-9b38-bfebb3b23db6",
+  // 	"role": "document",
+  // 	"aria-label": "Block: Curvy",
+  // 	"data-block": "8f9478a6-488c-4ea6-9b38-bfebb3b23db6",
+  // 	"data-type": "blockylicious/curvy",
+  // 	"data-title": "Curvy",
+  // 	"style": {}
+  // }
+
+  console.log(blockProps);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
     children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Blockylicious – hello from the editor!', 'blockylicious')
