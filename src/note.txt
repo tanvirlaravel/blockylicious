@@ -1,0 +1,11 @@
+This is going to be save in database
+--------------------------------------------------------------------------------------------
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">some text</p>
+<!-- /wp:paragraph -->
+---------------------------------
+1. wp:paragraph is the block name
+2. {"align":"center"} this is json data also known as attribute
+
+
+
