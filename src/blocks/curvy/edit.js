@@ -21,6 +21,7 @@ import { PanelBody, ToggleControl } from '@wordpress/components';
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './editor.scss';
+import metadata from "./block.json";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -51,10 +52,10 @@ export default function Edit() {
 			{ __( 'Blockylicious – hello from the editor!', 'blockylicious' ) }
 		</p>
 		<InspectorControls>
-			<PanelBody title="Top Curve">
+			<PanelBody title={ __( 'Top Curve', metadata.textdomain ) }>
 				<div style={{ display:'flex' }}>
 					<ToggleControl />
-					<span>Enable Top Curve</span>
+					<span>{ __( 'Enable Top Curve', metadata.textdomain ) }	</span>
 				</div>
 			</PanelBody>
 		</InspectorControls>
