@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from "@wordpress/i18n";
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -11,8 +11,8 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, ToggleControl } from '@wordpress/components';
+import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
+import { PanelBody, ToggleControl } from "@wordpress/components";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -20,7 +20,7 @@ import { PanelBody, ToggleControl } from '@wordpress/components';
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-import './editor.scss';
+import "./editor.scss";
 import metadata from "./block.json";
 
 /**
@@ -32,23 +32,27 @@ import metadata from "./block.json";
  * @return {Element} Element to render.
  */
 export default function Edit(props) {
-	console.log("props", props);
 
 	return (
 		<>
-		<p { ...useBlockProps() }>
-			{ __( 'Blockylicious – hello from the editor!', 'blockylicious' ) }
-		</p>
-		<InspectorControls>
-			<PanelBody title={ __( 'Top Curve', metadata.textdomain ) }>
-				<div style={{ display:'flex' }}>
-					<ToggleControl />
-					<span>{ __( 'Enable Top Curve', metadata.textdomain ) }	</span>
-				</div>
-			</PanelBody>
-		</InspectorControls>
+			<p {...useBlockProps()}>
+				{__("Blockylicious – hello from the editor!", "blockylicious")}
+			</p>
+			<InspectorControls>
+				<PanelBody title={__("Top Curve", metadata.textdomain)}>
+					<div style={{ display: "flex" }}>
+						<ToggleControl
+							checked={props.attributes.enableTopCurve}
+							onChange={(isChecked) => {
+								props.setAttributes({
+									enableTopCurve: isChecked,
+								});
+							}}
+						/>
+						<span>{__("Enable Top Curve", metadata.textdomain)} </span>
+					</div>
+				</PanelBody>
+			</InspectorControls>
 		</>
 	);
 }
-
-

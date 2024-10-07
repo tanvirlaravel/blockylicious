@@ -57,20 +57,26 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Edit(props) {
-  console.log("props", props);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
       ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
-      children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Blockylicious – hello from the editor!', 'blockylicious')
+      children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Blockylicious – hello from the editor!", "blockylicious")
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Top Curve', _block_json__WEBPACK_IMPORTED_MODULE_4__.textdomain),
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Top Curve", _block_json__WEBPACK_IMPORTED_MODULE_4__.textdomain),
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           style: {
-            display: 'flex'
+            display: "flex"
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
-            children: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable Top Curve', _block_json__WEBPACK_IMPORTED_MODULE_4__.textdomain), " "]
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+            checked: props.attributes.enableTopCurve,
+            onChange: isChecked => {
+              props.setAttributes({
+                enableTopCurve: isChecked
+              });
+            }
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
+            children: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Enable Top Curve", _block_json__WEBPACK_IMPORTED_MODULE_4__.textdomain), " "]
           })]
         })
       })
