@@ -8,6 +8,7 @@
   "icon": "smiley",
   "description": "A Curvy Block",
   "example": {},
+  "attributes": {},
   "supports": {
     "html": false
   },
