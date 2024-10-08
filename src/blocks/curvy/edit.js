@@ -1,5 +1,9 @@
 import { __ } from "@wordpress/i18n";
-import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
+import {
+	useBlockProps,
+	InspectorControls,
+	ColorPalette,
+} from "@wordpress/block-editor";
 import {
 	PanelBody,
 	ToggleControl,
@@ -92,6 +96,12 @@ export default function Edit(props) {
 									}}
 								/>
 								<span>{__("Flip Vertically", metadata.textdomain)} </span>
+							</div>
+
+							<HorizontalRule />
+							<div>
+								<label>{__("Curvy Color", metadata.textdomain)}</label>
+								<ColorPalette />
 							</div>
 						</>
 					)}
