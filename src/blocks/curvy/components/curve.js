@@ -29,7 +29,10 @@ function Curve(props) {
 				}}
 				viewBox="0 0 1200 120"
 			>
-				<path fill="white" d={props.flipY ? invertPath : normalPath}></path>
+				<path
+					style={{ fill: props.color || "white" }}
+					d={props.flipY ? invertPath : normalPath}
+				></path>
 			</svg>
 		</div>
 	);

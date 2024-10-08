@@ -39,7 +39,9 @@ function Curve(props) {
       },
       viewBox: "0 0 1200 120",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
-        fill: "white",
+        style: {
+          fill: props.color || "white"
+        },
         d: props.flipY ? invertPath : normalPath
       })
     })
@@ -96,6 +98,7 @@ function Edit(props) {
       className: `${className} alignfull`,
       ...blockProps,
       children: props.attributes.enableTopCurve && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_curve__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        color: props.attributes.topColor,
         flipX: props.attributes.topFlipX,
         flipY: props.attributes.topFlipY,
         height: props.attributes.topHeight,
