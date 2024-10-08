@@ -15,7 +15,12 @@
     }
   },
   "supports": {
-    "html": false
+    "html": false,
+    "color": {
+      "background": true,
+      "link": false,
+      "text": false
+    }
   },
   "textdomain": "blockylicious",
   "editorScript": "file:./index.js",

@@ -9,13 +9,18 @@
 	"description": "A Curvy Block",
 	"example": {},
 	"attributes": {
-		"enableTopCurve" : {
-			"type" : "boolean",
-			"default" : true
+		"enableTopCurve": {
+			"type": "boolean",
+			"default": true
 		}
 	},
 	"supports": {
-		"html": false
+		"html": false,
+		"color": {
+			"background": true,
+			"link": false,
+			"text": false
+		}
 	},
 	"textdomain": "blockylicious",
 	"editorScript": "file:./index.js",
