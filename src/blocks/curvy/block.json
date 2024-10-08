@@ -18,8 +18,11 @@
 		"html": false,
 		"color": {
 			"background": true,
-			"link": false,
-			"text": false
+			"link": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true
 		}
 	},
 	"textdomain": "blockylicious",

@@ -299,7 +299,7 @@ module.exports = window["wp"]["i18n"];
   \*************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blockylicious/curvy","version":"0.1.0","title":"Curvy","category":"text","icon":"smiley","description":"A Curvy Block","example":{},"attributes":{"enableTopCurve":{"type":"boolean","default":true}},"supports":{"html":false,"color":{"background":true,"link":false,"text":false}},"textdomain":"blockylicious","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blockylicious/curvy","version":"0.1.0","title":"Curvy","category":"text","icon":"smiley","description":"A Curvy Block","example":{},"attributes":{"enableTopCurve":{"type":"boolean","default":true}},"supports":{"html":false,"color":{"background":true,"link":true,"text":true},"spacing":{"padding":true}},"textdomain":"blockylicious","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 
