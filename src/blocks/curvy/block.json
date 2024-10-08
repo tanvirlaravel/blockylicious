@@ -9,6 +9,14 @@
 	"description": "A Curvy Block",
 	"example": {},
 	"attributes": {
+		"style": {
+			"type": "object",
+			"default": {
+				"color": {
+					"background": "#ec4899"
+				}
+			}
+		},
 		"enableTopCurve": {
 			"type": "boolean",
 			"default": true
