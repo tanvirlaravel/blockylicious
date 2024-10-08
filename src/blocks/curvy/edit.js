@@ -20,11 +20,15 @@ import Curve from "./components/curve";
  */
 export default function Edit(props) {
 	const { className, ...blockProps } = useBlockProps();
-	console.log(className);
 	return (
 		<>
 			<section className={`${className} alignfull`} {...blockProps}>
-				{props.attributes.enableTopCurve && <Curve />}
+				{props.attributes.enableTopCurve && (
+					<Curve
+						height={props.attributes.topHeight}
+						width={props.attributes.topWidth}
+					/>
+				)}
 			</section>
 
 			<InspectorControls>
