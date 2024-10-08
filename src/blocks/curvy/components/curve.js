@@ -7,11 +7,12 @@ function Curve(props) {
 				left: 0,
 				width: "100%",
 				height: props.height,
-				overflow: "hidden"
+				overflow: "hidden",
+				transform: `scaleX(${props.flipX ? -1 : 1})`,
 			}}
 		>
 			<svg
-			preserveAspectRatio="none"
+				preserveAspectRatio="none"
 				style={{
 					position: "absolute",
 					top: 0,

@@ -23,7 +23,8 @@ function Curve(props) {
       left: 0,
       width: "100%",
       height: props.height,
-      overflow: "hidden"
+      overflow: "hidden",
+      transform: `scaleX(${props.flipX ? -1 : 1})`
     },
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("svg", {
       preserveAspectRatio: "none",
@@ -93,6 +94,8 @@ function Edit(props) {
       className: `${className} alignfull`,
       ...blockProps,
       children: props.attributes.enableTopCurve && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_curve__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        flipX: props.attributes.topFlipX,
+        flipY: props.attributes.topFlipY,
         height: props.attributes.topHeight,
         width: props.attributes.topWidth
       })
