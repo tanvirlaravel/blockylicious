@@ -14,6 +14,14 @@
 			"default": {
 				"color": {
 					"background": "#ec4899"
+				},
+				"spacing": {
+					"padding": {
+						"top": "80px",
+						"right": "50px",
+						"bottom": "80px",
+						"left": "50px"
+					}
 				}
 			}
 		},
