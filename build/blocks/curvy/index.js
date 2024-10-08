@@ -59,28 +59,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_curve__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/curve */ "./src/blocks/curvy/components/curve.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
-
-
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
 
 
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
 
 
 
@@ -122,7 +103,29 @@ function Edit(props) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
             children: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Enable Top Curve", _block_json__WEBPACK_IMPORTED_MODULE_4__.textdomain), " "]
           })]
-        }), props.attributes.enableTopCurve && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.HorizontalRule, {})]
+        }), props.attributes.enableTopCurve && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.HorizontalRule, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
+            min: 100,
+            max: 300,
+            value: props.attributes.topWidth || 100,
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Width", _block_json__WEBPACK_IMPORTED_MODULE_4__.textdomain),
+            onChange: newValue => {
+              props.setAttributes({
+                topWidth: parseInt(newValue)
+              });
+            }
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
+            min: 0,
+            max: 200,
+            value: props.attributes.topHeight,
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Height", _block_json__WEBPACK_IMPORTED_MODULE_4__.textdomain),
+            onChange: newValue => {
+              props.setAttributes({
+                topHeight: parseInt(newValue)
+              });
+            }
+          })]
+        })]
       })
     })]
   });
@@ -305,7 +308,7 @@ module.exports = window["wp"]["i18n"];
   \*************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blockylicious/curvy","version":"0.1.0","title":"Curvy","category":"text","icon":"smiley","description":"A Curvy Block","example":{},"attributes":{"style":{"type":"object","default":{"color":{"background":"#ec4899"},"spacing":{"padding":{"top":"80px","right":"50px","bottom":"80px","left":"50px"}}}},"enableTopCurve":{"type":"boolean","default":true}},"supports":{"html":false,"color":{"background":true,"link":true,"text":true},"spacing":{"padding":true}},"textdomain":"blockylicious","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blockylicious/curvy","version":"0.1.0","title":"Curvy","category":"text","icon":"smiley","description":"A Curvy Block","example":{},"attributes":{"style":{"type":"object","default":{"color":{"background":"#ec4899"},"spacing":{"padding":{"top":"80px","right":"50px","bottom":"80px","left":"50px"}}}},"enableTopCurve":{"type":"boolean","default":true},"topWidth":{"type":"number","default":100},"topHeight":{"type":"number","default":100}},"supports":{"html":false,"color":{"background":true,"link":true,"text":true},"spacing":{"padding":true}},"textdomain":"blockylicious","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 
