@@ -22,6 +22,7 @@ import { PanelBody, ToggleControl } from "@wordpress/components";
  */
 import "./editor.scss";
 import metadata from "./block.json";
+import Curve from "./components/curve";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -35,6 +36,7 @@ export default function Edit(props) {
 
 	return (
 		<>
+		<Curve />
 			<p {...useBlockProps()}>
 				{__("Blockylicious – hello from the editor!", "blockylicious")}
 			</p>
