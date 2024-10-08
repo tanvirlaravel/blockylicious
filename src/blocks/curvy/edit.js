@@ -101,7 +101,19 @@ export default function Edit(props) {
 							<HorizontalRule />
 							<div>
 								<label>{__("Curvy Color", metadata.textdomain)}</label>
-								<ColorPalette />
+								<ColorPalette
+									// disableCustomColors
+									// colors={[
+									// 	{
+									// 		name: 'Yellow',
+									// 		color: "#ffff00"
+									// 	}
+									// ]}
+									value={props.attributes.topColor}
+									onChange={(value) => {
+										props.setAttributes({ topColor: value });
+									}}
+								/>
 							</div>
 						</>
 					)}
