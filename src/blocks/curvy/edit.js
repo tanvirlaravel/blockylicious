@@ -67,6 +67,30 @@ export default function Edit(props) {
 									props.setAttributes({ topHeight: parseInt(newValue) });
 								}}
 							/>
+
+							<HorizontalRule />
+							<div style={{ display: "flex" }}>
+								<ToggleControl
+									checked={props.attributes.topFlipX}
+									onChange={(isChecked) => {
+										props.setAttributes({
+											topFlipX: isChecked,
+										});
+									}}
+								/>
+								<span>{__("Flip horizontally", metadata.textdomain)} </span>
+							</div>
+							<div style={{ display: "flex" }}>
+								<ToggleControl
+									checked={props.attributes.topFlipY}
+									onChange={(isChecked) => {
+										props.setAttributes({
+											topFlipY: isChecked,
+										});
+									}}
+								/>
+								<span>{__("Flip Vertically", metadata.textdomain)} </span>
+							</div>
 						</>
 					)}
 				</PanelBody>
