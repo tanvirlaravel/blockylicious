@@ -2,17 +2,15 @@ import { __ } from "@wordpress/i18n";
 import {
 	useBlockProps,
 	InspectorControls,
-	ColorPalette,
 } from "@wordpress/block-editor";
 import {
 	PanelBody,
 	ToggleControl,
-	HorizontalRule,
-	RangeControl,
 } from "@wordpress/components";
 import "./editor.scss";
 import metadata from "./block.json";
 import Curve from "./components/curve";
+import TopCurveSetting from "./components/topCurveSetting";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -39,6 +37,7 @@ export default function Edit(props) {
 			</section>
 
 			<InspectorControls>
+
 				<PanelBody title={__("Top Curve", metadata.textdomain)}>
 					<div style={{ display: "flex" }}>
 						<ToggleControl
@@ -52,72 +51,8 @@ export default function Edit(props) {
 						<span>{__("Enable Top Curve", metadata.textdomain)} </span>
 					</div>
 
-					{props.attributes.enableTopCurve && (
-						<>
-							<HorizontalRule />
-							<RangeControl
-								min={100}
-								max={300}
-								value={props.attributes.topWidth || 100}
-								label={__("Width", metadata.textdomain)}
-								onChange={(newValue) => {
-									props.setAttributes({ topWidth: parseInt(newValue) });
-								}}
-							/>
+					{props.attributes.enableTopCurve && <TopCurveSetting attributes={props.attributes} setAttributes={props.setAttributes} />}
 
-							<RangeControl
-								min={0}
-								max={200}
-								value={props.attributes.topHeight}
-								label={__("Height", metadata.textdomain)}
-								onChange={(newValue) => {
-									props.setAttributes({ topHeight: parseInt(newValue) });
-								}}
-							/>
-
-							<HorizontalRule />
-							<div style={{ display: "flex" }}>
-								<ToggleControl
-									checked={props.attributes.topFlipX}
-									onChange={(isChecked) => {
-										props.setAttributes({
-											topFlipX: isChecked,
-										});
-									}}
-								/>
-								<span>{__("Flip horizontally", metadata.textdomain)} </span>
-							</div>
-							<div style={{ display: "flex" }}>
-								<ToggleControl
-									checked={props.attributes.topFlipY}
-									onChange={(isChecked) => {
-										props.setAttributes({
-											topFlipY: isChecked,
-										});
-									}}
-								/>
-								<span>{__("Flip Vertically", metadata.textdomain)} </span>
-							</div>
-
-							<HorizontalRule />
-							<div>
-								<label>{__("Curvy Color", metadata.textdomain)}</label>
-								<ColorPalette
-									// disableCustomColors
-									// colors={[
-									// 	{
-									// 		name: 'Yellow',
-									// 		color: "#ffff00"
-									// 	}
-									// ]}
-									value={props.attributes.topColor}
-									onChange={(value) => {
-										props.setAttributes({ topColor: value });
-									}}
-								/>
-							</div>
-						</>
-					)}
 				</PanelBody>
 			</InspectorControls>
 		</>
