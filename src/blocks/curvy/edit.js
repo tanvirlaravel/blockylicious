@@ -1,16 +1,11 @@
 import { __ } from "@wordpress/i18n";
-import {
-	useBlockProps,
-	InspectorControls,
-} from "@wordpress/block-editor";
-import {
-	PanelBody,
-	ToggleControl,
-} from "@wordpress/components";
+import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
+import { PanelBody, ToggleControl } from "@wordpress/components";
 import "./editor.scss";
 import metadata from "./block.json";
 import Curve from "./components/curve";
 import TopCurveSetting from "./components/topCurveSetting";
+import BottomCurveSetting from "./components/bottomCurveSetting";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -37,7 +32,6 @@ export default function Edit(props) {
 			</section>
 
 			<InspectorControls>
-
 				<PanelBody title={__("Top Curve", metadata.textdomain)}>
 					<div style={{ display: "flex" }}>
 						<ToggleControl
@@ -51,8 +45,33 @@ export default function Edit(props) {
 						<span>{__("Enable Top Curve", metadata.textdomain)} </span>
 					</div>
 
-					{props.attributes.enableTopCurve && <TopCurveSetting attributes={props.attributes} setAttributes={props.setAttributes} />}
+					{props.attributes.enableTopCurve && (
+						<TopCurveSetting
+							attributes={props.attributes}
+							setAttributes={props.setAttributes}
+						/>
+					)}
+				</PanelBody>
 
+				<PanelBody title={__("Bottom Curve", metadata.textdomain)}>
+					<div style={{ display: "flex" }}>
+						<ToggleControl
+							checked={props.attributes.enableBottomCurve}
+							onChange={(isChecked) => {
+								props.setAttributes({
+									enableBottomCurve: isChecked,
+								});
+							}}
+						/>
+						<span>{__("Enable Bottom Curve", metadata.textdomain)} </span>
+					</div>
+
+					{props.attributes.enableBottomCurve && (
+						<BottomCurveSetting
+							attributes={props.attributes}
+							setAttributes={props.setAttributes}
+						/>
+					)}
 				</PanelBody>
 			</InspectorControls>
 		</>
