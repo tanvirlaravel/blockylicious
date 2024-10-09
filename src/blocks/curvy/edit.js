@@ -29,6 +29,17 @@ export default function Edit(props) {
 						width={props.attributes.topWidth}
 					/>
 				)}
+
+				{props.attributes.enableBottomCurve && (
+					<Curve
+						isBottom
+						color={props.attributes.bottomColor}
+						flipX={props.attributes.bottomFlipX}
+						flipY={props.attributes.bottomFlipY}
+						height={props.attributes.bottomHeight}
+						width={props.attributes.bottomWidth}
+					/>
+				)}
 			</section>
 
 			<InspectorControls>

@@ -8,14 +8,15 @@ function Curve(props) {
 		<div
 			style={{
 				position: "absolute",
-				top: 0,
+				top: !props.isBottom ? 0 : "initial",
+				bottom: props.isBottom ? 0 : "initial",
 				left: 0,
 				width: "100%",
 				height: props.height,
 				overflow: "hidden",
 				transform: `scaleX(${props.flipX ? -1 : 1}) rotate(${
 					props.flipY ? "180deg" : 0
-				})`,
+				}) scaleY(${props.isBottom ? -1 : 1})`,
 			}}
 		>
 			<svg
