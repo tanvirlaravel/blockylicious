@@ -308,7 +308,7 @@ function Edit(props) {
         flipY: props.attributes.topFlipY,
         height: props.attributes.topHeight,
         width: props.attributes.topWidth
-      }), props.attributes.enableBottomCurve && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_curve__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {}), props.attributes.enableBottomCurve && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_curve__WEBPACK_IMPORTED_MODULE_5__["default"], {
         isBottom: true,
         color: props.attributes.bottomColor,
         flipX: props.attributes.bottomFlipX,
@@ -451,9 +451,11 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function save() {
+  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save();
+  const innerBlockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useInnerBlocksProps.save(blockProps);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-    ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save(),
-    children: 'Blockylicious – hello from the saved content!'
+    ...innerBlockProps,
+    children: " "
   });
 }
 
